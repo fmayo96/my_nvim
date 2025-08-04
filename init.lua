@@ -31,3 +31,8 @@ local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<space>fd", builtin.find_files)
 vim.keymap.set("n", "<space>fg", builtin.live_grep) 
 vim.keymap.set("n", "<C-n>", ':Neotree toggle<CR>', { noremap=true, silent=true})
+vim.diagnostic.config({
+  virtual_text = {
+    prefix = '●', -- Or any other character you prefer
+  },
+})
