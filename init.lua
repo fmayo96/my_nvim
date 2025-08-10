@@ -22,18 +22,15 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-
 require("lazy").setup("plugins")
-require("catppuccin").setup()
-vim.cmd.colorscheme("catppuccin")
 
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<space>fd", builtin.find_files)
 vim.keymap.set("n", "<space>fg", builtin.live_grep)
-vim.keymap.set("n", "<C-n>", ':Neotree toggle<CR>', { noremap = true, silent = true })
+vim.keymap.set("n", "<C-n>", ":Neotree toggle<CR>", { noremap = true, silent = true })
 vim.diagnostic.config({
   virtual_text = {
-    prefix = '●', -- Or any other character you prefer
+    prefix = "●", -- Or any other character you prefer
   },
 })
 
@@ -45,4 +42,4 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     })
   end,
 })
-vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, { desc = "Code Action" })
+vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, { desc = "Code Action" })
