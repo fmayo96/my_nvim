@@ -34,6 +34,8 @@ vim.diagnostic.config({
   },
 })
 
+vim.keymap.set("n", "<C-t>", ":ToggleTerm size=12 direction=horizontal<CR>", {noremap=true, silent=true})
+
 vim.api.nvim_create_autocmd("BufWritePre", {
   callback = function(args)
     vim.lsp.buf.format({
@@ -43,3 +45,5 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   end,
 })
 vim.keymap.set("n", "<space>ca", vim.lsp.buf.code_action, { desc = "Code Action" })
+vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP Hover" })
+

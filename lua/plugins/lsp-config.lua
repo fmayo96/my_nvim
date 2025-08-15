@@ -47,9 +47,9 @@ return {
         end, opts)
 
         -- Enable inlay hints if available
-        --if client.server_capabilities.inlayHintProvider then
-        --vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
-        --end
+      --  if client.server_capabilities.inlayHintProvider then
+      --  vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+      --  end
       end
 
       -- TypeScript/JavaScript LSP
