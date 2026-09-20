@@ -19,6 +19,7 @@ return {
 					"html",
 					"cssls",
 					"clangd",
+          "texlab"
 				},
 			})
 		end,
@@ -51,7 +52,6 @@ return {
 				--  vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
 				--  end
 			end
-
 			-- TypeScript/JavaScript LSP
 			lspconfig.ts_ls.setup({
 				capabilities = capabilities,

@@ -1,0 +1,25 @@
+-- lua/plugins/rose-pine.lua
+return {
+	"rose-pine/neovim",
+	name = "rose-pine",
+	config = function()
+		require("rose-pine").setup({
+			styles = {
+				transparency = true,
+			},
+			highlight_groups = {
+				-- Keep editor and floating-window surfaces transparent.
+				Normal = { bg = "none" },
+				NormalNC = { bg = "none" },
+				NormalFloat = { bg = "none" },
+				FloatBorder = { bg = "none" },
+				FloatTitle = { bg = "none" },
+				Pmenu = { bg = "none" },
+				PmenuSel = { bg = "none" },
+				PmenuSbar = { bg = "none" },
+				PmenuThumb = { bg = "none" },
+			},
+		})
+		vim.cmd("colorscheme rose-pine")
+	end
+}
